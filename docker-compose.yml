@@ -1,0 +1,6 @@
+services:
+  hardfight:
+    build: .
+    volumes:
+      - "$PWD/irc_config.yaml:/app/irc_config.yaml"
+      - "$PWD/save:/app/save"
