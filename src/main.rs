@@ -248,8 +248,8 @@ async fn main() -> std::io::Result<()> {
         .await
         .add_event_system(IrcCommand::RPL_ENDOFWHO, endofwho)
         .await
-        .add_system("f", new_fight)
-        .await
+        //.add_system("f", new_fight)
+        //.await
         .add_system("royalrumble", royal_rumble)
         .await
         .add_system("challenge", challenge)
@@ -631,9 +631,9 @@ fn show_help() -> impl IntoResponse {
     (
         false,
         vec![
-            ",f <nick> <nick>            | duel fight",
-            ",f <nick> ... vs <nick> ... | team battle",
-            ",f <nick> <nick> <nick> ... | free for all",
+            //",f <nick> <nick>            | duel fight",
+            //",f <nick> ... vs <nick> ... | team battle",
+            //",f <nick> <nick> <nick> ... | free for all",
             ",royalrumble                | chan wide free for all",
             ",challenge <nick>           | challenge someone to a deathmatch",
             ",accept                     | accept a challenge",
