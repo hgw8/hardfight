@@ -21,7 +21,7 @@ use rand::{
 };
 use serde::{Deserialize, Serialize};
 
-const SAVE_LOC: &'static str = "hall_of_fame.yaml";
+const SAVE_LOC: &'static str = "save/hall_of_fame.yaml";
 
 const PRESENTATIONS: &'static [&'static str] = &[
     "A faggot coming straight from the underground!",
