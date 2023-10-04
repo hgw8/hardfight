@@ -773,7 +773,10 @@ fn challenge(
     if let Err(e) = check_idle(&fight.status) {
         return Err(e);
     }
-
+    if arguments[0] == prefix.nick {
+        return Err("you can't challenge yourself nigga.".to_owned())
+    }
+    
     fight.status = FightStatus::WaitingWho;
     fight.channel = channel.to_owned();
     fight.kind = FightKind::DeathMatch;
