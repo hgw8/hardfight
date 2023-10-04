@@ -1,2 +1,8 @@
+ircie/
+save/
+.gitignore
+docker-compose.yml
+Dockerfile
+example.irc_config.yml
+IDEAS
 irc_config.yaml
-/ircie
