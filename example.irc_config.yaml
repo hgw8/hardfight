@@ -1,0 +1,21 @@
+host: irc.supernets.org
+port: 6697
+ssl: true
+
+channels:
+    - "#5000"
+
+nick: hardfight
+user: hardfight
+real: hardfight
+
+nickserv_pass: REDACTED
+nickserv_email: REDACTED
+
+cmdkey: ","
+
+flood_interval: 1
+
+owner: "*!*@cia.gov"
+
+admins: []
