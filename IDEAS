@@ -1,4 +1,8 @@
 disallow ,challenging self
+(When challenging yourself, this error occurs:
+hardfight-hardfight-1  | thread 'tokio-runtime-worker' panicked at 'called `Option::unwrap()` on a `None` value', src/main.rs:386:53
+hardfight-hardfight-1  | note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+)
 fix ,f
 make this fuckin lib async so I can sleep in between shit
 ,titlefight where looser gets 5k'd
