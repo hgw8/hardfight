@@ -1,5 +1,5 @@
 /target
 Cargo.lock
-irc_config.yaml
-/save
+config/irc_config.yaml
+config/hall_of_fame.yaml
 /ircie

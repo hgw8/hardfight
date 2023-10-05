@@ -21,7 +21,7 @@ use rand::{
 };
 use serde::{Deserialize, Serialize};
 
-const SAVE_LOC: &'static str = "save/hall_of_fame.yaml";
+const SAVE_LOC: &'static str = "config/hall_of_fame.yaml";
 
 const PRESENTATIONS: &'static [&'static str] = &[
     "A faggot coming straight from the underground!",
@@ -234,7 +234,7 @@ impl Fight {
 async fn main() -> std::io::Result<()> {
     env_logger::init();
 
-    let mut irc = Irc::from_config("irc_config.yaml").await?;
+    let mut irc = Irc::from_config("config/irc_config.yaml").await?;
 
     irc.add_resource(Fight::default())
         .await
