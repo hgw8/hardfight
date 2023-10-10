@@ -140,6 +140,13 @@ impl HallOfFame {
         };
         *winner += 3;
     }
+    pub fn add_rumble_champion(&mut self, nick: &str) {
+        let winner = match self.entry(nick.to_owned()) {
+            std::collections::hash_map::Entry::Occupied(o) => o.into_mut(),
+            std::collections::hash_map::Entry::Vacant(v) => v.insert(0),
+        };
+        *winner += 10;
+    }
     pub fn add_fucking_looser(&mut self, nick: &str) {
         let fucking_looser = match self.entry(nick.to_owned()) {
             std::collections::hash_map::Entry::Occupied(o) => o.into_mut(),
@@ -330,6 +337,9 @@ fn fight(
             if fight.kind == FightKind::DeathMatch {
                 hall_of_fame.add_winner(&winners[0].nick);
             }
+            if fight.kind == FightKind::RoyalRumble {
+                hall_of_fame.add_rumble_champion(&winners[0].nick);
+            }
         } else {
             ctx.privmsg(
                 &fight.channel,
@@ -353,6 +363,9 @@ fn fight(
                 );
                 if fight.kind == FightKind::DeathMatch {
                     hall_of_fame.add_winner(&w.nick);
+                }
+                if fight.kind == FightKind::RoyalRumble {
+                    hall_of_fame.add_rumble_champion(&w.nick);
                 }
             }
         }
