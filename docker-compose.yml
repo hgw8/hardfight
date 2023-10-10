@@ -1,6 +1,7 @@
 services:
   hardfight:
+    container_name: hardfight
     image: git.supernets.org/hgw/hardfight:latest
     #build: .
     volumes:
-      - "$PWD/config/:/app/config/"
+      - "$PWD/config/:/hardfight/config/"
